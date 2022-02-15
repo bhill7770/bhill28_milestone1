@@ -3,6 +3,16 @@
 
 Heroku Link: [ ] 
 
+App requirements: 
+
+main.py
+style.css
+index.html
+.env
+Procfile
+requirement.txt
+
+
 ## Framworks: 
 
 In preparation for this project, I wrote the initial lines of Python code on the VS code editor to employ the workings of Python’s Flask to build a startup webpage. Pylint was useful in cleaning up the code. HTML and CSS provided the necessary elements to create and design a functionable webpage that is fairly user friendly. In order to dynamically fetch data from the required API keys (TMDB and Wikipedia), I need to import Json, "requests" as well as "OS" libraries to be able to read and store the data to load onto the webpage. Github, as a cloud based hosting service platform, allows for developers to keep track of Git repositories, which is useful for this assignment. Heroku assisted in building, running as well as operating the web application. 
