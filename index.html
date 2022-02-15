@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="/static/style.css"/>
+        <title>TOP FLICK PICKS OF ALL TIME</title>
+        <style>
+            img {
+                border: 11px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <h1> Top Flick Picks of All Time </h1>
+        <p>📽  I.t's s.h.o.w.t.i.m.e l.a.d.i.e.s & g.e.n.t.s!  📽  </p>
+        <ol>
+            <img src="/static/movie.jpeg" alt="movie clipart" width="500" height="500">
+        </ol>
+        <p><span style="color:black"> 🎬 • Movie Recommendations of Highly Watched Films • 🎬 </span></p>
+        <br>
+        <br>
+        <h2> ♡ Refresh Page to View Different Feature Films to Choose From ♡ </h2>
+        <ol>
+            <img src="/static/movie_ticket.jpeg" alt="movie ticket clipart" width="400" height="200">
+        </ol>
+        <br>
+        <p> ♡ The Featured Films: </p>  
+     <br>
+     {% for pop_movie in data["results"]%}
+      <h3><span style="color:black">•</span> {{pop_movie.title}} <span style="color:black">•</span> </h3> 
+      <img src="https://image.tmdb.org/t/p/original/{{pop_movie.poster_path}}" alt="Movie Poster" width= "700" height="900">
+       <p><span style="color:slategray"> Overview: </span> {{pop_movie.overview}}</p> 
+       <p><span style="color:slategray"> ○ Genres: </span> {{pop_movie.genre_ids}}</p> 
+       <p><span style="color:slategray"> ○ Release Date: </span> {{pop_movie.release_date}}</p> 
+       <p><span style="color:slategray"> ○ Average Voter Rating: </span> {{pop_movie.vote_average}} /10 ☆</p> 
+       <a href="https://en.wikipedia.org/wiki/{{pop_movie.title}}" target="__">Link to Film's Wikimedia Page</a> 
+       <br>
+       <br>
+      {%endfor%}
+     <br>
+     <br>
+     <p>♡ <span style="color:black">For reference regarding genre ids</span> - <span style="color:slategray">Action:</span> 28, <span style="color:slategray">Adventure:</span> 12, <span style="color:slategray">Animation:</span> 16, <span style="color:slategray">Comedy:</span> 35, 
+        <span style="color:slategray">Crime:</span> 80, <span style="color:slategray">Documentary:</span> 99, <span style="color:slategray">Drama:</span> 18, <span style="color:slategray">Family:</span> 10751, <span style="color:slategray">Fantasy:</span> 14, <span style="color:slategray">History:</span> 36, <span style="color:slategray">Horror:</span> 27, 
+        <span style="color:slategray">Music:</span> 10402, <span style="color:slategray">Mystery:</span> 9648, <span style="color:slategray">Romance:</span> 10749, <span style="color:slategray">Sci-Fi:</span> 878, <span style="color:slategray">TV-Movie:</span> 10770, <span style="color:slategray">Thriller:</span> 53, <span style="color:slategray">War:</span> 10752, <span style="color:slategray">Western:</span> 37 ♡</p>
+     <br>
+        <p>♡ Search For a Film ♡</p>
+     <form id="form" role="search">
+        <input type="search" id="query" name="q" size="500"
+         placeholder="Search for your favorite movies, genres, etc..."
+         timesnewroman-label="Search through site content">
+        <button>Search</button>
+      </form>
+      <br>
+      <p>Don't forget to grab a drink & some popcorn on your way out!!</p>
+      <img src="/static/pop.jpeg" alt="popcorn and drink clipart" width="300" height="300">
+    </body>
+    </html>
