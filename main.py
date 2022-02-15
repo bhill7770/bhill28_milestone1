@@ -3,6 +3,9 @@ import json
 import requests
 import os 
 
+from dotenv import find_dotenv, load_dotenv
+load_dotenv(find_dotenv())
+
 app = flask.Flask(__name__)
 
 BASE_URL = "https://api.themoviedb.org/3"
