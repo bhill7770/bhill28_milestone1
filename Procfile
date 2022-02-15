@@ -1,1 +1,1 @@
-web: gunicorn [OPTIONS] APP_MODULE
+web: gunicorn main: MilestoneProject1
