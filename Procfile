@@ -1,1 +1,1 @@
-web: gunicorn main: movietimecentral
+web: python main.py
