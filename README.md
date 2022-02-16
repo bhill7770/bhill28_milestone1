@@ -3,7 +3,10 @@
 
 Heroku Link: [https://shielded-woodland-27014.herokuapp.com/] 
 
-App requirements: 
+Setup Instructions:
+  Run main.py 
+  Run index.html
+  Run style.css 
 
 main.py
 style.css
